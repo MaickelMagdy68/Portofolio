@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maickel Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Maickel Portfolio</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hello! I'm <strong>Maickel</strong>, a Python & Web Developer specializing in Django and AI solutions. I build responsive websites and intelligent applications.</p>
+</section>
+
+<section id="projects">
+  <h2>My Projects</h2>
+
+  <div class="project">
+    <h3>Django Blog</h3>
+    <img src="https://via.placeholder.com/400x200" alt="Django Blog">
+    <p>A full-featured blog built with Django and PostgreSQL.</p>
+    <a href="#" class="button">View Project</a>
+  </div>
+
+  <div class="project">
+    <h3>AI Chatbot</h3>
+    <img src="https://via.placeholder.com/400x200" alt="AI Chatbot">
+    <p>An AI-powered chatbot using Python and machine learning.</p>
+    <a href="#" class="button">View Project</a>
+  </div>
+
+  <div class="project">
+    <h3>Portfolio Website</h3>
+    <img src="https://via.placeholder.com/400x200" alt="Portfolio Website">
+    <p>A responsive portfolio website to showcase my skills.</p>
+    <a href="#" class="button">View Project</a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:maickel@example.com">maickel@example.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/maickel" target="_blank">linkedin.com/in/maickel</a></p>
+  <p>GitHub: <a href="https://github.com/maickel" target="_blank">github.com/maickel</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Maickel. All rights reserved.
+</footer>
+
+<script>
+const sections=document.querySelectorAll('section');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+},{threshold:0.2});
+sections.forEach(section=>observer.observe(section));
+</script>
+</body>
+</html>
